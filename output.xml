@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.4 on win32)" generated="20180628 23:18:43.792">
+<suite id="s1" name="慧猿CRM登录新增区域测试">
+<test id="s1-t1" name="启动浏览器">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CRM}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180628 23:18:44.396" level="INFO">Opening browser 'Chrome' to base url 'https://crm.kemai.com.cn'.</msg>
+<status status="PASS" starttime="20180628 23:18:44.396" endtime="20180628 23:18:55.093"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>科脉慧猿CRM</arg>
+</arguments>
+<msg timestamp="20180628 23:18:55.108" level="INFO">Page title is '科脉慧猿CRM'.</msg>
+<status status="PASS" starttime="20180628 23:18:55.094" endtime="20180628 23:18:55.108"></status>
+</kw>
+<status status="PASS" starttime="20180628 23:18:44.395" endtime="20180628 23:18:55.109" critical="no"></status>
+</test>
+<test id="s1-t2" name="慧猿CRM登录测试">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login1_input}</arg>
+<arg>769316</arg>
+</arguments>
+<msg timestamp="20180628 23:18:55.111" level="INFO">Typing text '769316' into text field 'name=user_name'.</msg>
+<status status="PASS" starttime="20180628 23:18:55.111" endtime="20180628 23:18:55.338"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login2_input}</arg>
+<arg>crm666</arg>
+</arguments>
+<msg timestamp="20180628 23:18:55.338" level="INFO">Typing text 'crm666' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20180628 23:18:55.338" endtime="20180628 23:18:55.486"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${login_btn}</arg>
+</arguments>
+<msg timestamp="20180628 23:18:55.487" level="INFO">Clicking button 'class=loginBut'.</msg>
+<status status="PASS" starttime="20180628 23:18:55.486" endtime="20180628 23:18:55.583"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180628 23:18:58.583" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180628 23:18:55.583" endtime="20180628 23:18:58.583"></status>
+</kw>
+<status status="PASS" starttime="20180628 23:18:55.109" endtime="20180628 23:18:58.583" critical="no"></status>
+</test>
+<test id="s1-t3" name="断言验证登录结果标题">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>科脉慧猿CRM-首页</arg>
+</arguments>
+<msg timestamp="20180628 23:18:58.602" level="INFO">Page title is '科脉慧猿CRM-首页'.</msg>
+<status status="PASS" starttime="20180628 23:18:58.585" endtime="20180628 23:18:58.602"></status>
+</kw>
+<status status="PASS" starttime="20180628 23:18:58.584" endtime="20180628 23:18:58.603" critical="no"></status>
+</test>
+<test id="s1-t4" name="新增区域">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180628 23:19:03.604" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20180628 23:18:58.604" endtime="20180628 23:19:03.604"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ziliao_element}</arg>
+</arguments>
+<msg timestamp="20180628 23:19:03.605" level="INFO">Clicking element 'xpath=//*[.='资料']'.</msg>
+<status status="PASS" starttime="20180628 23:19:03.604" endtime="20180628 23:19:05.521"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180628 23:19:08.522" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180628 23:19:05.521" endtime="20180628 23:19:08.522"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${area_element}</arg>
+</arguments>
+<msg timestamp="20180628 23:19:08.523" level="INFO">Clicking element 'xpath=//*[.='区域信息']'.</msg>
+<status status="PASS" starttime="20180628 23:19:08.523" endtime="20180628 23:19:10.055"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180628 23:19:13.056" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180628 23:19:10.055" endtime="20180628 23:19:13.056"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${area_add_btn}</arg>
+</arguments>
+<msg timestamp="20180628 23:19:13.058" level="INFO">Clicking button 'id=area_add'.</msg>
+<status status="PASS" starttime="20180628 23:19:13.057" endtime="20180628 23:19:13.244"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180628 23:19:16.245" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180628 23:19:13.245" endtime="20180628 23:19:16.245"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${area_name_input}</arg>
+<arg>测试robot</arg>
+</arguments>
+<msg timestamp="20180628 23:19:16.246" level="INFO">Typing text '测试robot' into text field 'xpath=//div[@class='form-body']/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20180628 23:19:16.246" endtime="20180628 23:19:16.542"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${area_save_btn}</arg>
+</arguments>
+<msg timestamp="20180628 23:19:16.543" level="INFO">Clicking button 'xpath=//*[.='保存']'.</msg>
+<status status="PASS" starttime="20180628 23:19:16.542" endtime="20180628 23:19:17.020"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180628 23:19:20.021" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180628 23:19:17.020" endtime="20180628 23:19:20.021"></status>
+</kw>
+<status status="PASS" starttime="20180628 23:18:58.603" endtime="20180628 23:19:20.022" critical="no"></status>
+</test>
+<test id="s1-t5" name="断言验证新增区域结果">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>确定</arg>
+</arguments>
+<msg timestamp="20180628 23:19:20.099" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
+    &lt;meta name="referrer" content="always" /&gt;
+    &lt;title&gt;科脉慧猿CRM-区域信息&lt;/title&gt;
+    &lt;meta name="author" content="深圳市科脉技术 www.kemai.com.cn" /&gt;
+    &lt;meta name="Keywords" content="科脉，慧猿，CRM，慧猿CRM，餐饮会员系统、会员营销系统" /&gt;
+    &lt;meta name="Description" content="创建于1999年，深圳科脉是全国领先的零售POS系统开发商，为购物中心、百货商场超市、专营专卖、餐饮娱乐、移动互联网企业提供解决方案:400-060-5200。[科脉软件]深圳科脉技术股份有限公司，零售流通行业[POS系统]首席开发商。餐饮管理软件、POS系统、商场收银软件、连锁超市管理软件、收银系统、火锅店软件、快餐店软件、母婴店软件、收银系统软件找科脉软件。" /&gt;
+    &lt;link href="/bundles/Css/Base?v=U3rjgq9jVU9O-il5dEkIJoGdxzLOiqB2zTF8gd2d6mo1" rel="stylesheet" /&gt;
+
+    
+    
+
+    &lt;style&gt;
+        #cnzz_stat_icon_1273999033 {
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body style="overflow: hidden;"&gt;
+    &lt;!--header START--&gt;
+    &lt;div class="page-header"&gt;
+        &lt;div class="page-header-logo"&gt;
+            &lt;a href="https://admin-statistics.crm.kemai.com.cn/Home/Index"&gt;
+                &lt;img src="/Content/images/logo.png" alt="慧猿" /&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="page-header-action"&gt;
+            &lt;ul class="nav navbar-nav pull-right"&gt;
+                
+                &lt;li class="branch-switcher dropdown"&gt;
+                    &lt;div class="btn-group bootstrap-select show-tick fit-width"&gt;&lt;button type="button" class="btn dropdown-toggle branch-switcher-btn" data-toggle="dropdown" role="button" title="科脉总店"&gt;&lt;span class="filter-option pull-left"&gt;科脉总店&lt;/span&gt; &lt;span class="bs-caret"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class="dropdown-menu open" role="combobox"&gt;&lt;div class="bs-searchbox"&gt;&lt;input type="text" class="form-control" autocomplete="off" role="textbox" aria-label="Search" /&gt;&lt;/div&gt;&lt;ul class="dropdown-menu inner" role="listbox" aria-expanded="false"&gt;&lt;li data-original-index="1" class="selected"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"&gt;&lt;span class="text"&gt;科脉总店&lt;/span&gt;&lt;span class="glyphicon glyphicon-ok check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="2"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;好参谋店&lt;/span&gt;&lt;span class="glyphicon glyphicon-ok check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="3"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;好餐谋演示-北京店&lt;/span&gt;&lt;span class="glyphicon glyphicon-ok check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="4"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;朱杰&lt;/span&gt;&lt;span class="glyphicon glyphicon-ok check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="5"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;南京永祥前&lt;/span&gt;&lt;span class="glyphicon glyphicon-ok check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="6"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;春都庄园&lt;/span&gt;&lt;span class="glyphicon glyphicon-ok check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;select class="show-tick" title="选择门店" data-size="4" data-role="select" data-live-search="true" data-style="branch-switcher-btn" data-width="fit" data-bind="options:List,optionsText:'name',&amp;#10;                            optionsValue:'id',valueAllowUnset:true,&amp;#10;                            value:Current,&amp;#10;                            optionsAfterRender:updateSelector.bind($root)" style="display: none" tabindex="-98"&gt;&lt;option class="bs-title-option" value=""&gt;选择门店&lt;/option&gt;&lt;option value="2"&gt;科脉总店&lt;/option&gt;&lt;option value="6"&gt;好参谋店&lt;/option&gt;&lt;option value="12"&gt;好餐谋演示-北京店&lt;/option&gt;&lt;option value="16"&gt;朱杰&lt;/option&gt;&lt;option value="17"&gt;南京永祥前&lt;/option&gt;&lt;option value="25"&gt;春都庄园&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class="user-dropdown dropdown"&gt;
+                    &lt;a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"&gt;
+                        &lt;img class="img-circle" src="/Content/images/img2.jpg" /&gt;
+                        &lt;span class="username"&gt;超级管理员...&lt;/span&gt;
+                        &lt;i class="fa fa-chevron-down"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;ul class="dropdown-menu"&gt;
+                        &lt;li&gt;
+                            &lt;a href="/Cust/CustTask"&gt;
+                                &lt;i class="fa fa-upload"&gt;&lt;/i&gt;导出结果
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="/OnlinePos/OnlinePos"&gt;
+                                &lt;i class="fa fa-rmb"&gt;&lt;/i&gt;收银台
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="/crmassivers/download"&gt;
+                                &lt;i class="fa fa-download"&gt;&lt;/i&gt;助手下载
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+
+                        &lt;li&gt;
+                            &lt;a href="/Notice/NoticeCenter"&gt;
+                                &lt;i class="fa fa-bell"&gt;&lt;/i&gt;消息中心
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="/User/ModifyPass"&gt;
+                                &lt;i class="fa fa-lock"&gt;&lt;/i&gt;修改密码
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="/User/LoginOut"&gt;
+                                &lt;i class="fa fa-power-off"&gt;&lt;/i&gt;退出系统
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="page-header-menu"&gt;
+            &lt;ul class="nav navbar-nav"&gt;
+                &lt;li&gt;&lt;a href="https://admin-statistics.crm.kemai.com.cn/Home/Index"&gt;首页&lt;/a&gt;&lt;/li&gt;&lt;li class="active"&gt;&lt;a href="https://admin-business.crm.kemai.com.cn/Cust/Index"&gt;资料&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://admin-member.crm.kemai.com.cn/VipInfo/index"&gt;会员&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://admin-catering.crm.kemai.com.cn/foodinfo/index"&gt;餐饮&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://admin-marketing.crm.kemai.com.cn/Activity/AffiliateMarketing"&gt;营销&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://admin-statistics.crm.kemai.com.cn/VipAnalysis/Properties"&gt;决策&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--header END--&gt;
+    &lt;div class="clearfix"&gt;&lt;/div&gt;
+    &lt;!--container START--&gt;
+    &lt;div class="page-container"&gt;
+        &lt;div class="page-container-wrapper"&gt;
+            
+
+&lt;div class="page-sidebar-wrapper"&gt;
+    &lt;div class="page-sidebar" data-ext-height="124"&gt;
+        &lt;ul class="page-sidebar-menu"&gt;
+            &lt;li&gt;
+                                    &lt;a href="javascript:;"&gt;
+                                        &lt;i class="fa fa-file-text"&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;基础资料&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;ul class="sub-menu"&gt;&lt;li&gt;
+                                    &lt;a href="/Cust/Index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;商户信息&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/branch/index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;门店信息&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/brand/index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;品牌信息&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="javascript:;" class="active"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;区域信息&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;/ul&gt;
+                                &lt;/li&gt;&lt;li class="divider"&gt;&lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="javascript:;"&gt;
+                                        &lt;i class="fa fa-certificate"&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;账户授权&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;ul class="sub-menu"&gt;&lt;li&gt;
+                                    &lt;a href="/WeixinAuthorize/Index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;微信授权&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/Temple/CustIndex"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;微信公众号模板消息&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/Template/Index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;微信小程序模板消息&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/MiniProgram/Index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;小程序开发管理&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/Sms/Index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;短信管理&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/xqpayaccount/index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;享钱帐号管理&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/OfficialAccount/Menus"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;微信公众号菜单&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;/ul&gt;
+                                &lt;/li&gt;&lt;li class="divider"&gt;&lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="javascript:;"&gt;
+                                        &lt;i class="fa fa-sitemap"&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;用户资料&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;ul class="sub-menu"&gt;&lt;li&gt;
+                                    &lt;a href="/role/index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;角色权限&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="/Employee/index"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;员工管理&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;/ul&gt;
+                                &lt;/li&gt;&lt;li class="divider"&gt;&lt;/li&gt;&lt;li&gt;
+                                    &lt;a href="javascript:;"&gt;
+                                        &lt;i class="fa fa-bell"&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;公告&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;ul class="sub-menu"&gt;&lt;li&gt;
+                                    &lt;a href="/Notice/Custom"&gt;
+                                        &lt;i&gt;&lt;/i&gt;
+                                        &lt;span class="title"&gt;商户公告&lt;/span&gt;
+                                    &lt;/a&gt;
+                                    
+                                &lt;/li&gt;&lt;/ul&gt;
+                                &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="page-content-wrapper"&gt;
+    &lt;div class="page-content"&gt;
+        
+
+&lt;style&gt;
+    .select_diy {
+        border: solid 1px #ddd;
+        width: 230px;
+        height: 22px;
+    }
+
+    .textStyle1 {
+        width: 228px;
+        padding: 4px 10px;
+        border-color: #ddd;
+    }
+
+    .ta {
+        height: 841px !important;
+    }
+&lt;/style&gt;
+&lt;div class="page-content-head"&gt;
+    &lt;div class="page-title"&gt;
+        &lt;h1&gt;
+            区域信息
+        &lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class="page-tool"&gt;
+        &lt;button type="button" class="btn btn-default" id="area_add" data-bind="click:clickHandler.open"&gt;
+            &lt;i class="fa fa-plus-square-o margin-right-5"&gt;&lt;/i&gt;新增
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="page-content-body"&gt;
+    &lt;div class="widget"&gt;
+        &lt;div class="table-tool form-inline"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;input type="text" class="form-control input-sm" data-bind="value:search.code" placeholder="编码" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;input type="text" class="form-control input-sm" data-bind="value:search.name" placeholder="名称" /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;div class="btn-group bootstrap-select" style="width: 120px;"&gt;&lt;button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="全部"&gt;&lt;span class="filter-option pull-left"&gt;全部&lt;/span&gt; &lt;span class="bs-caret"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class="dropdown-menu open" role="combobox"&gt;&lt;ul class="dropdown-menu inner" role="listbox" aria-expanded="false"&gt;&lt;li data-original-index="0" class="selected"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"&gt;&lt;span class="text"&gt;全部&lt;/span&gt;&lt;span class="fa fa-check check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="1"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;无效&lt;/span&gt;&lt;span class="fa fa-check check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="2"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;有效&lt;/span&gt;&lt;span class="fa fa-check check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;select data-role="select" data-width="120px" data-bind="value:search.status" class="" tabindex="-98"&gt;
+                    &lt;option value="-1"&gt;全部&lt;/option&gt;
+                    &lt;option value="0"&gt;无效&lt;/option&gt;
+                    &lt;option value="1"&gt;有效&lt;/option&gt;
+                &lt;/select&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;button type="button" class="btn btn-default" data-bind="click:clickHandler.reload"&gt;
+                    &lt;i class="fa fa-search margin-right-5"&gt;&lt;/i&gt;
+                    查询
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="clearfix"&gt;
+            &lt;table class="table table-advance"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th width="10%"&gt;编码&lt;/th&gt;
+                        &lt;th&gt;名称&lt;/th&gt;
+                        &lt;th width="80px"&gt;状态&lt;/th&gt;
+                        &lt;th&gt;添加人&lt;/th&gt;
+                        &lt;th width="200px"&gt;添加时间&lt;/th&gt;
+                        &lt;th width="200px"&gt;修改人&lt;/th&gt;
+                        &lt;th width="200px"&gt;修改时间&lt;/th&gt;
+                        &lt;th width="120px"&gt;操作&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;!--ko foreach:{data:$root.pagelist.list}--&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0007&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;测试robot&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-06-28 23:19:25&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-06-28 23:19:25&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0000&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;测试2&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-06-28 22:15:50&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-06-28 22:15:50&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0005&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;四川&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-04-05 09:23:10&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-04-05 09:23:10&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0004&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;湖南&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-04-04 19:18:32&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-04-04 19:18:32&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0003&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;成都&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-01-25 18:13:34&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-01-25 18:13:34&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0002&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;武汉&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-01-25 18:13:30&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-01-25 18:13:30&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr&gt;
+                        &lt;td&gt; &lt;!--ko text:Code--&gt;0001&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;!--ko text:AreaName--&gt;广东&lt;!--/ko--&gt; &lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:Status--&gt;有效&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreateName--&gt;超级管理员&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:CreatedDate--&gt;2018-01-25 18:13:25&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateName--&gt;&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt; &lt;!--ko text:UpdateDate--&gt;2018-01-25 18:13:25&lt;!--/ko--&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.edit"&gt;编辑&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-link" data-bind="click:$root.clickHandler.delete"&gt;删除&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;!--/ko--&gt;
+                    &lt;!--ko ifnot:$root.pagelist.list().length--&gt;&lt;!--/ko--&gt;
+                &lt;/tbody&gt;
+                &lt;tfoot&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan="8"&gt;
+                            &lt;div class="table-paginate" data-bind="pagination:pagelist"&gt;&lt;div class="table-info"&gt;&lt;span&gt;总共1页,每页10条,总记录:7条&lt;/span&gt;&lt;/div&gt;&lt;div class="table-pagination"&gt;&lt;ul class="pagination"&gt;&lt;li class="current first disabled"&gt;&lt;a href="javascript:;"&gt;首页&lt;/a&gt;&lt;/li&gt;&lt;li class="previous disabled"&gt;&lt;a href="javascript:;" title="上一页"&gt;&lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class="current"&gt;&lt;a href="javascript:;"&gt;1&lt;/a&gt;&lt;/li&gt;&lt;li class="next disabled"&gt;&lt;a href="javascript:;" title="下一页"&gt;&lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class="current last disabled"&gt;&lt;a href="javascript:;"&gt;尾页&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tfoot&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!--footer START--&gt;
+        &lt;div class="page-footer"&gt;
+            &lt;div class="page-footer-content"&gt;
+                2018 © 版权所有：深圳市科脉技术股份有限公司 [证券代码：834873]
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--footer END--&gt;
+    &lt;/div&gt;
+    &lt;!--container END--&gt;
+    &lt;script src="/bundles/Js/Base?v=n63Mr-kORbwqoDs3DqYUFV6KVEaJhADebwQCeQsNu-Q1"&gt;&lt;/script&gt;
+
+    
+    &lt;script type="text/javascript"&gt;
+        Base.init("",
+            "",
+            "3",
+            "/info/",
+            "10|https://admin-business.crm.kemai.com.cn,20|https://admin-member.crm.kemai.com.cn,30|https://admin-marketing.crm.kemai.com.cn,40|https://admin-statistics.crm.kemai.com.cn,50|https://admin-catering.crm.kemai.com.cn",
+            "0.30",
+            { admin: "https://crm.kemai.com.cn", cookie: ".crm.kemai.com.cn" });
+    &lt;/script&gt;
+    
+    
+    &lt;div class="km-modal fade" id="add_page" style="width: 526px; height: auto; max-height: 459px; display: none;"&gt;
+        &lt;div class="km-modal-header" style="cursor: move;"&gt;
+            &lt;button type="button" class="close" data-role="modal-closer"&gt;&lt;/button&gt;
+            &lt;h2 class="km-modal-title"&gt;区域新增&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class="km-modal-body" style="max-height: 349px;"&gt;
+            &lt;form action="#" data-bind="submit:handler.save" class="form form-horizontal"&gt;
+                &lt;div class="form-body"&gt;
+                    &lt;div class="form-group"&gt;
+                        &lt;label class="control-label col-md-3"&gt;编码&lt;/label&gt;
+                        &lt;div class="col-md-8"&gt;
+                            &lt;input type="text" class="form-control" data-bind="value:area.Code" readonly="readonly" /&gt;
+                            &lt;input type="text" class="form-control" style="display:none;" data-bind="value:area.ID" /&gt;
+                            &lt;span class="help-block has-error" data-bind="validationMessage:area.Code" style="display: none;"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                        &lt;label class="control-label col-md-3"&gt;名称&lt;/label&gt;
+                        &lt;div class="col-md-8"&gt;
+                            &lt;input type="text" class="form-control" data-bind="value:area.AreaName" /&gt;
+                            &lt;span class="help-block has-error" data-bind="validationMessage:area.AreaName" style="display: none;"&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                        &lt;label class="control-label col-md-3"&gt;是否有效&lt;/label&gt;
+                        &lt;div class="col-md-8"&gt;
+                            &lt;div class="btn-group bootstrap-select show-tick" style="width: 100%;"&gt;&lt;button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="有效"&gt;&lt;span class="filter-option pull-left"&gt;有效&lt;/span&gt; &lt;span class="bs-caret"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;div class="dropdown-menu open" role="combobox"&gt;&lt;ul class="dropdown-menu inner" role="listbox" aria-expanded="false"&gt;&lt;li data-original-index="0" class="selected"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"&gt;&lt;span class="text"&gt;有效&lt;/span&gt;&lt;span class="fa fa-check check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li data-original-index="1"&gt;&lt;a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"&gt;&lt;span class="text"&gt;无效&lt;/span&gt;&lt;span class="fa fa-check check-mark"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;select class="show-tick" data-bind="value:area.Status" data-role="select" data-width="100%" tabindex="-98"&gt;
+                                &lt;option value="1"&gt;有效&lt;/option&gt;
+                                &lt;option value="0"&gt;无效&lt;/option&gt;
+                            &lt;/select&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form-actions right"&gt;
+                    &lt;button type="button" class="btn btn-default" data-role="modal-closer"&gt;取消&lt;/button&gt;
+                    &lt;button type="submit" class="btn btn-primary"&gt;保存&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="/bundles/Js/Validation?v=xJ6vTa-BL9sMmqB44FNSyXx4u8_irO639Khv50jjWNY1"&gt;&lt;/script&gt;
+&lt;script src="/bundles/Js/Paging?v=GrGnfkgekCXqUKu1MNdD7D_4JW2Fl_5q7bImqu0JyT01"&gt;&lt;/script&gt;
+&lt;script src="/Content/Js/Page/Info/Area/area.min.js?_v=0.30"&gt;&lt;/script&gt;
+
+
+
+
+    &lt;script type="text/javascript"&gt;var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1273999033'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1273999033%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));&lt;/script&gt;&lt;span id="cnzz_stat_icon_1273999033"&gt;&lt;/span&gt;&lt;script src=" https://s19.cnzz.com/z_stat.php?id=1273999033&amp;amp;show=pic1" type="text/javascript"&gt;&lt;/script&gt;
+
+
+&lt;div class="km-modal" data-role="modal-dialog" id="modal-dialog-1530199157280" style="max-height: 459px; display: block; top: 172px; left: 290px; z-index: 1011;"&gt;    &lt;div class="km-modal-body" style="max-height: 349px;"&gt;       &lt;div class="km-modal-dialog-icon success"&gt;&lt;i class="fa fa-check-circle"&gt;&lt;/i&gt;&lt;/div&gt;       &lt;div class="km-modal-dialog-msg"&gt;保存成功&lt;/div&gt;    &lt;/div&gt;    &lt;div class="km-modal-footer"&gt;&lt;button type="button" class="btn btn-primary" data-role="modal-dialog-ok"&gt;确定&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="km-backdrop1530199157282" data-role="backdrop" class="km-backdrop" style="position: absolute; z-index: 1010; height: 1077px; width: 1080px;"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<msg timestamp="20180628 23:19:20.146" level="INFO">Current page contains button '确定'.</msg>
+<status status="PASS" starttime="20180628 23:19:20.027" endtime="20180628 23:19:20.146"></status>
+</kw>
+<status status="PASS" starttime="20180628 23:19:20.023" endtime="20180628 23:19:20.146" critical="no"></status>
+</test>
+<test id="s1-t6" name="关闭浏览器">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20180628 23:19:20.147" endtime="20180628 23:19:23.202"></status>
+</kw>
+<status status="PASS" starttime="20180628 23:19:20.146" endtime="20180628 23:19:23.203" critical="no"></status>
+</test>
+<status status="PASS" starttime="20180628 23:18:43.840" endtime="20180628 23:19:23.205"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="0" info="critical">登录测试</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="慧猿CRM登录新增区域测试">慧猿CRM登录新增区域测试</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
